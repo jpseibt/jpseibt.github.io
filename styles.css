@@ -23,10 +23,11 @@ header {
 }
 
 .intro img.profile {
+    height: 220px;
     float: left;
     border-right: 10px;
-    border-radius: 50%;
-    padding: 20px;
+    border-radius: 38%;
+    padding: 10px;
 }
 
 .intro p {
@@ -246,6 +247,10 @@ iframe.embedded-cv {
     text-align: right;
 }
 
+.game-list {
+    column-count: 2;
+}
+
 @media screen and (max-width: 580px) {
     body {
         margin: 10px auto;
@@ -297,11 +302,15 @@ iframe.embedded-cv {
         padding-right: 6px;
     }
 
+    .intro img.profile {
+        height: 180px;
+    }
+
     #nbapark-inner-projects {
         font-size: 18px;
         padding-left: 20px;
     }
-    
+
     iframe.embedded-ybvideo {
         width: 300px;
         height: 225px;
