@@ -322,6 +322,10 @@ iframe.embedded-cv {
         height: 580px;
     }
 
+    .game-list {
+        column-count: 1;
+    }
+
     img.lily58 {
         display: block;
         margin: auto;
