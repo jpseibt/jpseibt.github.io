@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function()
                 <i class="bi bi-linkedin">
                     I'm on LinkedIn:
                     <a
-                        href="https://www.linkedin.com/in/jpaulo-seibt"
+                        href="https://www.linkedin.com/in/jpseibt"
                         target="_blank"
                     >
-                        linkedin.com/in/jpaulo-seibt
+                        linkedin.com/in/jpseibt
                     </a>
                 </i>
             </p>
