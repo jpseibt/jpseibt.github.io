@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', function()
                 <i class="bi bi-github">
                     My GitHub:
                     <a
-                        href="https://github.com/nazumaJP27"
+                        href="https://github.com/jpseibt"
                         target="_blank"
                     >
-                        github.com/nazumaJP27
+                        github.com/jpseibt
                     </a>
                 </i>
             </p>
