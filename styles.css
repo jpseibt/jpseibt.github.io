@@ -215,6 +215,16 @@ div.project-link-skills {
     font-weight: bold;
 }
 
+img.r-battle {
+    margin-left: 30px;
+    border-radius: 12px;
+}
+
+img.mvp-comp {
+    margin-left: 30px;
+    border-radius: 12px;
+}
+
 img.lily58 {
     display: inline-block;
     margin-left: 30px;
