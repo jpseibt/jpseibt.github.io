@@ -23,11 +23,12 @@ header {
 }
 
 .intro img.profile {
-    height: 220px;
+    height: 200px;
     float: left;
     border-right: 10px;
     border-radius: 38%;
     padding: 10px;
+    margin-bottom: 22px;
 }
 
 .intro p {
@@ -313,7 +314,12 @@ iframe.embedded-cv {
     }
 
     .intro img.profile {
-        height: 180px;
+        height: 160px;
+        margin-bottom: 0px;
+    }
+
+    hr.sep-hr2 {
+        width: auto;
     }
 
     #nbapark-inner-projects {
@@ -336,7 +342,20 @@ iframe.embedded-cv {
         column-count: 1;
     }
 
+    img.r-battle {
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+
+    img.mvp-comp {
+        width: 250px;
+        display: block;
+        margin: auto;
+    }
+
     img.lily58 {
+        width: 250px;
         display: block;
         margin: auto;
         margin-bottom: 20px;
