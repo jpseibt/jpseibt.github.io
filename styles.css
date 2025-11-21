@@ -2,7 +2,7 @@ body {
     margin: 40px auto;
     font-family: 'Noto Sans', Verdana, sans-serif;
     background-color: #021027;
-    color: #DDDDDD;
+    color: #dddddd;
 
     width: 880px;
     font-size: 20px;
@@ -242,6 +242,10 @@ iframe.embedded-ybvideo {
     border-radius: 12px;
 }
 
+div.mobile-cv-card {
+    display: none;
+}
+
 iframe.embedded-cv {
     display: block;
     margin: 0 auto;
@@ -333,9 +337,48 @@ iframe.embedded-cv {
         margin: auto;
     }
 
+    /* Visible only for mobile */
+    div.mobile-cv-card {
+        display: block;
+        background-color: #0c2854;
+        border-style: solid;
+        border-width: 2px;
+        border-radius: 8px;
+        border-color: #dddddd;
+        padding: 30px;
+        text-align: center;
+        margin: 20px 10px;
+        color: #dddddd;
+    }
+
+    .mobile-cv-card h3 {
+        color: #ffc600;
+        margin-top: 10px;
+    }
+
+    .mobile-cv-card p {
+        font-size: 16px;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    a.mobile-btn {
+        display: inline-block;
+        background-color: #dddddd;
+        color: #021027;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-weight: bold;
+        border: none;
+    }
+
     iframe.embedded-cv {
-        width: 100%;
-        height: 75vh; /* Takes 75% of display height */
+        display: none;
+    }
+
+    /* Hide the original download link since there's one inside the card */
+    #cv-download {
+        display: none;
     }
 
     .game-list {
