@@ -26,8 +26,9 @@ header {
     height: 200px;
     float: left;
     border-right: 10px;
-    border-radius: 38%;
-    padding: 10px;
+    border-radius: 50%;
+    padding: 16px;
+    margin-top: 22px;
     margin-bottom: 22px;
 }
 
@@ -318,8 +319,10 @@ iframe.embedded-cv {
     }
 
     .intro img.profile {
-        height: 160px;
-        margin-bottom: 0px;
+        height: 122px;
+        padding: 6px;
+        margin-top: -6px;
+        margin-bottom: -6px;
     }
 
     hr.sep-hr2 {
