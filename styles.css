@@ -17,23 +17,23 @@ footer {
     line-height: 15px;
 }
 
-header {
-    display: block;
-    margin-bottom: 30px;
+.intro {
+    margin-bottom: 66px;
 }
 
 .intro img.profile {
-    height: 200px;
+    height: 180px;
     float: left;
-    border-right: 10px;
+    margin-top: -8px;
+    margin-bottom: -8px;
     border-radius: 50%;
-    padding: 16px;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    padding: 12px;
 }
 
 .intro p {
     font-style: italic;
+    font-size: 24px;
+    padding-top: 30px;
 }
 
 hr.header-hr {
@@ -318,11 +318,18 @@ iframe.embedded-cv {
         padding-right: 6px;
     }
 
+    .intro {
+        margin-bottom: 0px;
+    }
+
     .intro img.profile {
         height: 122px;
         padding: 6px;
-        margin-top: -6px;
-        margin-bottom: -6px;
+    }
+
+    .intro p {
+        font-size: 18px;
+        padding-top: 0px;
     }
 
     hr.sep-hr2 {
