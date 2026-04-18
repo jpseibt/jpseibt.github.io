@@ -28,6 +28,7 @@ footer {
     margin-bottom: -8px;
     border-radius: 50%;
     padding: 12px;
+    pointer-events: none;
 }
 
 .intro p {
