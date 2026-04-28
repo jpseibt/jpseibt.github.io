@@ -264,6 +264,18 @@ iframe.embedded-cv {
     text-align: center;
 }
 
+body .gist .gist-data {
+    font-family: monospace;
+    font-size: 14px;
+    filter: invert(0.95) hue-rotate(180deg);
+    height: 600px;
+    border-radius: 8px;
+}
+
+body .gist .gist-meta {
+    display: none;
+}
+
 .game-list {
     column-count: 2;
 }
