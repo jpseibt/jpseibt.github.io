@@ -117,7 +117,7 @@ a.project-github-link {
     display: inline;
     border: none;
     width: fit-content;
-    font-size: 26px;
+    font-size: 36px;
     margin-right: 6px;
 }
 
@@ -218,12 +218,7 @@ div.project-link-skills {
     font-weight: bold;
 }
 
-img.r-battle {
-    margin-left: 30px;
-    border-radius: 12px;
-}
-
-img.mvp-comp {
+img.project-pic {
     margin-left: 30px;
     border-radius: 12px;
 }
@@ -408,13 +403,7 @@ body .gist .gist-meta {
         column-count: 1;
     }
 
-    img.r-battle {
-        width: 250px;
-        display: block;
-        margin: auto;
-    }
-
-    img.mvp-comp {
+    img.project-pic {
         width: 250px;
         display: block;
         margin: auto;

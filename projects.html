@@ -22,20 +22,78 @@
     <hr class="header-hr">
   </header>
 
+  <h2>NBA Park - Replay Center Game</h2>
+  <p class="subtitle">Multi-client Basketball Quiz | May 2026</p>
+  <hr class="sep-hr2">
+  <p>
+    <b>TLDR:</b> A quiz-like game and playback control system for an attraction at NBA Park Gramado,
+    synchronizing six player tablets, an operator console, and a leaderboard screen while controlling
+    <a href="https://www.resolume.com/" target="_blank">Resolume Arena</a> video feeds via UDP/OSC.
+    It focuses on stability and fast-paced control flow regardless of network drops. This project was
+    a fullstack <b>remake</b> for an attraction that was developed by a contractor when the park first
+    opened in 2023.
+  </p>
+  <p>
+    Back in my first months on the <b>IT team</b> at NBA Park (2025), every now and then we came
+    across some radio call or similar complaint about "weird issues in the Replay Center", primarily
+    players disconnecting during a session, scores not being computed correctly, or other obscure bugs.
+    As the other guys would tell me at the time: <i>"Just restart the PM2 on the attractions server,
+    and delete the tablets' browser caches and cookies when something like this happens <b>again</b>"</i>.
+  </p>
+  <p>
+    As this situation kept getting more frequent and annoying for both the team operating it and our
+    visitors, I started looking at it differently. Rather than despising the new occurrences, I was
+    actively looking for clues and reasons for why it seemed to break at "random". It was the perfect
+    opportunity to explore a stack that I was not that familiar with, and the challenge instantly
+    drove me to peek under the hood looking for a solution.
+  </p>
+  <p>
+    After realizing that the only way would be to implement every existing aspect from scratch, the
+    new driving factor was looking for every possible design and architecture decision that could have
+    been made <b>better</b>, and <b>new features</b> that would improve the experience and <b>ease of use</b>,
+    always keeping in mind the operation dynamics and physical constraints of a network sometimes packed
+    with 800+ people. My main objective was to build an <b>ultra-reliable and fail-proof system</b>,
+    while being fast and deterministic, giving the session operator control and feedback over the stages
+    at all times.
+  </p>
+  <p>
+    After all was said and done and some weeks of live testing, I believe that the ultimate goal was
+    achieved, along with many tweaks made after the constant feedback from the team, elevating every
+    aspect of the attraction and fixing all the <b>"weird issues"</b>. It also left room for future
+    expansions, as we did with the number of questions, adding <b>28 new plays</b> on top of the previous
+    four, and providing full control over any aspect of the game, from the server and video mapping
+    in the back to what users interact with on the devices.
+  </p>
+  <img class="project-pic" src="assets/replay_center_admin.png" width="500" alt="replay center - operator console">
+  <div class="project-link-skills">
+    <a class="project-github-link"
+      href="https://github.com/jpseibt/NBAPark_ReplayCenter"
+      target="_blank"
+    >
+      <i class="bi bi-github"></i>
+    </a>
+    <p class="project-skills">
+      Python | HTML/CSS/JavaScript | Networking | State Management | UI/UX | Troubleshooting
+    </p>
+  </div>
+
   <h2>Brocopy</h2>
   <p class="subtitle">Arena Allocators Study | February 2026</p>
   <hr class="sep-hr2">
   <p>
-    Developed for learning and implementing arena allocators and string / slices manipulation in C, inspired by the
-    <a href="https://github.com/EpicGamesExt/raddebugger/tree/master/src/base" target="_blank">raddbg</a> codebase style,
-    focusing on efficient <b>memory management</b>. The tool copies files to paths defined in an external .csv, mapped
-    via "keys" passed as arguments. <br>
-    It started as a script used for "broadcasting" print jobs to network printers at the NBA Park restaurant, solving a
-    limitation with the RMS that couldn't send a single order to more than one printer. There's still an example
-    program in the codebase that does this (for Windows and Windows Server) by using a
-    <a href="https://github.com/lomo74/mfilemon" target="_blank">Mfilemon</a> port configured to create a file from the
-    printer's driver output and pass its path to the program, along with the path to the CSV file that
-    defines the destination paths, and one or more keys that will be matched against the first column of the given CSV.
+    Developed for learning and implementing arena allocators and string / slices manipulation in C,
+    inspired by the <a href="https://github.com/EpicGamesExt/raddebugger/tree/master/src/base" target="_blank">raddbg</a>
+    codebase style, focusing on efficient <b>memory management</b>. The tool copies files to paths
+    defined in an external .csv, mapped via "keys" passed as arguments.
+  </p>
+  <p>
+    It started as a script used for "broadcasting" print jobs to network printers at the NBA Park
+    restaurant, solving a limitation with the RMS that couldn't send a single order to more than one
+    printer. There's still an example program in the codebase that does this (for Windows and Windows
+    Server) by using a <a href="https://github.com/lomo74/mfilemon" target="_blank">Mfilemon</a> port
+    configured to create a file from the printer's driver output and pass its path to the program,
+    along with the path to the CSV file that defines the destination paths, and one or more keys that
+    will be matched against the first column of the given CSV.
   </p>
   <div class="project-link-skills">
     <a class="project-github-link"
@@ -52,8 +110,9 @@
   <p class="subtitle">R&D on projects | Present</p>
   <hr class="sep-hr2">
   <p>
-    Work as a programmer on projects for Arduino-controlled attractions throughout the theme park, building experiences
-    focusing on <b>game feedback</b> and <b>maintainability</b>. Here are the attractions where the library was used:
+    Work as a programmer on projects for Arduino-controlled attractions throughout the theme park,
+    building experiences focusing on <b>game feedback</b> and <b>maintainability</b>. Here are the
+    attractions where the library was used:
   </p>
   <div id="nbapark-inner-projects">
     <h3>
@@ -66,11 +125,11 @@
       R-Battle (Prototype)
     </h3>
     <p>
-      Tabletop basketball game using remotely controlled tanks, with matches up to 4 players. I programmed the game
-      logic, addressable LEDs, IR sensors on the "baskets" to count each scored point, a buzzer, the content on the TFT display,
-      and a button for interaction and configuration.
+      Tabletop basketball game using remotely controlled tanks, with matches up to 4 players. I
+      programmed the game logic, addressable LEDs, IR sensors on the "baskets" to count each scored
+      point, a buzzer, the content on the TFT display, and a button for interaction and configuration.
     </p>
-    <img class="r-battle" src="assets/r-battle0.jpg" width="500" alt="r-battle display prototype">
+    <img class="project-pic" src="assets/r_battle0.jpg" width="500" alt="r-battle display prototype">
 
     <h3>
       <a class="project-github-link"
@@ -82,12 +141,13 @@
       MVP Competion
     </h3>
     <p>
-      Pop-a-shot-like game where players compete for the highest score, having three hoops to make shots, where a 
-      projection shows which one is active for scoring. I programmed the game and integration logic with the projection 
-      mapping software, using OSC protocol for information exchange between the microcontroller and the computer running
-      the projections, as well as US sensors attached to the hoops to count scored points.
+      Pop-a-shot-like game where players compete for the highest score, having three hoops to make
+      shots, where a projection shows which one is active for scoring. I programmed the game and
+      integration logic with the projection mapping software, using OSC protocol for information
+      exchange between the microcontroller and the computer running the projections, as well as US
+      sensors attached to the hoops to count scored points.
     </p>
-    <img class="mvp-comp" src="assets/mvp-comp0.jpg" width="500" alt="mvp-comp attraction">
+    <img class="project-pic" src="assets/mvp_comp0.jpg" width="500" alt="mvp-comp attraction">
   </div>
   <div class="project-link-skills">
     <a class="project-github-link"
@@ -97,7 +157,7 @@
       <i class="bi bi-github"></i>
     </a>
     <p class="project-skills">
-      C++ | Memory Management | PlatformIO | Arduino | OOP | UX | Communication Protocols | Embedded | Electronics
+      C++ | Memory Management | Arduino | OOP | UX | Communication Protocols | Embedded | Electronics
     </p>
   </div>
 
@@ -106,12 +166,13 @@
   <hr class="sep-hr2">
   <p>
     The <a href="https://developers.google.com/edu/c++/cpp-in-depth#how-google-works" target="_blank">course's final project</a>
-    is to build a search engine by creating an Inverted Index data structure from text documents, providing a command-line
-    UI for query input and search result display, while the previous was an <b>ATM Simulator</b>, both illustrating <i>I/O and OO</i>
-    design in C++ and project structuring. By requiring multiple files, write a hash table from scratch and perform dynamic
-    memory allocation, those projects helped me better understand the <b>C/C++ build process</b> and <b>memory management</b>
-    as a whole, while also giving me plenty of room to explore tools like <b>Make</b> and <b>GDB</b>, which I was curious to
-    learn at the time.
+    is to build a <b>search engine</b> by creating an Inverted Index data structure from text documents,
+    providing a command-line UI for query input and search result display, while the previous was an
+    <b>ATM Simulator</b>, both illustrating <i>I/O and OO</i> design in C++ and project structuring.
+    By requiring multiple files, write a hash table from scratch and perform dynamic memory allocation,
+    those projects helped me better understand the <b>C/C++ build process</b> and <b>memory management</b>
+    as a whole, while also giving me plenty of room to explore tools like <b>Make</b> and <b>GDB</b>,
+    which I was curious to learn at the time.
   </p>
   <div class="project-link-skills">
     <a class="project-github-link"
@@ -129,10 +190,11 @@
   <p class="subtitle">CS50P's Final Project | July 2024</p>
   <hr class="sep-hr2">
   <p>
-    A 2D arcade-style game inspired by <i>Super Ghouls 'n Ghosts</i>, featuring a leaderboard system that stores the top ten
-    highest scores and the names of the players who achieved them. This project pushed me into prototyping and implementing
-    game mechanics, such as score and stat tracking systems, collisions, enemy behaviors, dynamic item and weapon systems,
-    player leveling, game balancing, customizable controls, and UI. The game can be downloaded on
+    A 2D arcade-style game inspired by <i>Super Ghouls 'n Ghosts</i>, featuring a leaderboard system
+    that stores the top ten highest scores and the names of the players who achieved them. This project
+    pushed me into prototyping and implementing game mechanics, such as score and stat tracking systems,
+    collisions, enemy behaviors, dynamic item and weapon systems, player leveling, game balancing,
+    customizable controls, and UI. The game can be downloaded on
     <a href="https://nazuma.itch.io/pygame-ghouls-n-ghosts" target="_blank">Itch.io</a>.
   </p>
   <iframe class="embedded-ybvideo"
