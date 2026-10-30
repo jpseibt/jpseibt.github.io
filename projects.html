@@ -22,6 +22,75 @@
     <hr class="header-hr">
   </header>
 
+  <h2>Memvwr</h2>
+  <p class="subtitle">Memory Inspector for Vim/Neovim and GDB/termdebug</p>
+  <hr class="sep-hr2">
+  <p>
+    For context, I've been using the RAD Debugger since late 2025, and it became one of the most
+    important tools of my systems programming learning journey. I could go on and on praising raddbg,
+    and suffice it to say that it made me go a year without running GDB or Visual Studio.
+  </p>
+  <p>
+    However, since I couldn't use raddbg on Linux up until September 2026, I ended up exploring the
+    termdebug built-in plugin for Vim and Neovim, which I really liked. But the first thing that
+    was <i>missing</i> from my workflow with raddbg was a dedicated <b>memory window</b>. So I started
+    building one in Vimscript.
+  </p>
+  <p>
+    I've been messing around with Vimscript for quite some time now, and my vimrc became quite stuffed
+    with things like a little build system, custom file manipulation with netrw, and some things in
+    between. This project made me explore Vim's floating and pop-up windows (and the differences
+    between their Vim and Neovim APIs), handling cursor positioning, and even syntax files.
+  </p>
+  <p>
+    Anyway, this raddbg-inspired "Memory Window" for termdebug became too much even for my vimrc, so
+    it's now aimed to be used more generally as a <b>binary blob viewer</b> plugin for Vim and Neovim.
+    Still have a long way to go and many features that I wish to implement, but it's quite handy for
+    my debugging sessions right now.
+  </p>
+  <a href="assets/memvwr_demo_raw_bin.png">
+    <img class="project-pic" src="assets/memvwr_demo_raw_bin.png" width="700" alt="memvwr - blob inspector">
+  </a>
+  <p>
+    One of the highlights of this project was definitely the <b>data inspector</b> part, that prompted
+    me to go back and refresh my understanding of binary data representations, particularly floating-point
+    numbers (since I couldn't just rely on C type casts). Actually, I realized that I didn't fully
+    understand floats only when it came time to implement the parser for them! So I took two weeks to
+    read and dive back into <a href="https://www.youtube.com/playlist?list=PLTd6ceoshprcpen2Jvs_JiuvWvqIAkzea"
+    target="_blank">binary conversions</a> of all kinds.
+  </p>
+  <p>
+    For the termdebug integration, I first used GDB's `dump binary memory` and read it from disk,
+    but the logical next step is to use the <a href="https://sourceware.org/gdb/current/onlinedocs/gdb.html/GDB_002fMI.html"
+    target="_blank">GDB/MI interface</a>, which I'm also testing by hooking into the termdebug
+    communication setup. It would also be nice to add hex-editor-like features, that could translate
+    to poking the memory of a running target in GDB.
+  </p>
+  <p>
+    It currently features cursor tracking, hex/oct/dec/bin representations, and an 8/16/32/64-bit
+    inspector for integer and floating-point extraction, reading data directly from disk or Vim blobs.
+    The video below presents some of the possible use cases.
+  </p>
+  <iframe class="embedded-ybvideo"
+    src="https://www.youtube.com/embed/dHHUmu6k9HE"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  >
+  </iframe>
+  <div class="project-link-skills">
+    <a class="project-github-link"
+      href="https://github.com/jpseibt/memvwr"
+      target="_blank"
+    >
+      <i class="bi bi-github"></i>
+    </a>
+    <p class="project-skills">
+      Binary Data Manipulation | GDB | Vimscript | Column-based Interfaces
+    </p>
+  </div>
+
   <h2>NBA Park - Replay Center Game</h2>
   <p class="subtitle">Multi-client Basketball Quiz | May 2026</p>
   <hr class="sep-hr2">
